@@ -11,16 +11,6 @@ final class Thing {
   private Thing() {}
   
   public static void main(String[] args) {
-    System.err.println("--- Potential Features ---");
-    System.err.println("Add a Symbol'meta object with the type metaobjects or maybe add a Types object with the type symbols and the metaobjects");
-    System.err.println("Add import-ish features");
-    System.err.println("Add a delete operator");
-    System.err.println("Add class syntax and an instanceof operator");
-    System.err.println("Add operator overloading etc.");
-    System.err.println("--- Fixes ---");
-    System.err.println("Fix string escape sequences");
-    System.err.println("Give operators proper precedence");
-    System.err.println("Allow a more robust iterable system");
     var files = new ArrayList<ThingParser.FileContext>();
     var errorCount = 0;
     for (var file : args) try {
