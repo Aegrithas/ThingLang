@@ -1,0 +1,60 @@
+func main()
+  let factorials = [factorial, otherFactorial, factorialTheThird, factorialIV, finalFactorial];
+  for factorial in factorials do println("5! = " + factorial(5));
+  let left = Point(3, 7), right = Point(7, 42);
+  println(left'add(right)'toString());
+  println(typeof left, typeof right);
+  right'foo = "baz";
+  println(left'foo, right'foo);
+  println(for i in 0..9 do + on i);
+  nil.
+
+func factorial(n)
+  if n < 2 then 1 else n * factorial(n - 1).
+
+func otherFactorial(n)
+  while n > 1 do * on n-- else 1.
+
+func factorialTheThird(n)
+  var total = 1;
+  while n > 1 do total *= n--.
+
+func factorialIV(n)
+  for var i = 1; i <= n; i++ do * on i else 1.
+
+func finalFactorial(n)
+  for i in 1..n do * on i else 1.
+
+let Point = {
+  let class = Symbol("point").
+  
+  func [Symbol'invoke](x, y)
+    {foo: "bar"} ^ {
+      let [Symbol'type] = Point'class.
+      
+      let x = x, y = y.
+      
+      func add(p)
+        with this do Point(x + p'x, y + p'y).
+      
+      func toString()
+        with this do "Point(" + x + ", " + y + ")".
+      
+      func [Symbol'invoke]()
+        with this do println(toString()).
+    }.
+}.
+
+/*class Point(x, y) extends {foo: "bar"}
+  
+  let x = x, y = y.
+  
+  func add(p)
+    with this do Point(x + p'x, y + p'y).
+  
+  func toString()
+    with this do "Point(" + x + ", " + y + ")".
+  
+.*/
+
+do main().
