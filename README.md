@@ -12,6 +12,7 @@ I think much of the language is fairly intuitive for those familiar with other p
    * Without a combinator, the value of the loop is the value of the last iteration.
    * With a combinator and only one iteration, the value of the loop is the value of that one iteration.
    * With combinator `f`, the value of the loop is `f(f(f(v0, v1), ...), vN)` where `vI` is the value of the `I`th iteration. A (potentially) simpler explanation of this is that the mathematical summation <img src="https://latex.codecogs.com/gif.latex?\sum_{i=n}^{m}e" title="\sum_{i=n}^{m}e" /> can be written as `for var i = n; n < m; i++ do + on e`.
+ 
  It's also worth noting the four different syntaxes for object creation:
   * Array notation: a comma separated list of the elements enclosed in square brackets; the key for each element is its zero-based index in that list.
  * Dictionary notation: a comma separated list of `key: value` pairs enclosed in square brackets.
