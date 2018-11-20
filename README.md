@@ -24,12 +24,6 @@ I think much of the language is fairly intuitive for those familiar with other p
 
 Requires Antlr 4.7.
 
-Known bugs that I didn't really want to bother fixing:
- * String escape sequences don't work; this is particularly bothersome in cases such as `"I say \"Hello World!\" sometimes."` because, while the "escaped" quotes don't end the string token, the backslashes are still present in the actual runtime string.
- * Operators do not have proper precedence.
- * Arrays are currently the only thing that can be iterated on; this should be revamped more like Java's iterable system.
- * There really should be more builtin functions etc.
-
 Bonus features I'm too lazy to implement (yet):
  * Some way to directly access the metaobjects of the builtin types (maybe via `Symbol`?)
  * Move all those types (and presumably the metaobjects as well) to a `Types` object
