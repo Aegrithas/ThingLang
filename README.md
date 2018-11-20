@@ -1,4 +1,4 @@
-# ThingLang
+#ÞiŋLang
 A toy interpreter for a programming language I came up with.
 
 I think much of the language is fairly intuitive for those familiar with other programming languages (particularly JavaScript and Lua), however there are a few things I think are worth mentioning. Please bear with me if I skip something important, though, because this isn't supposed to be a full explanation; for that, see the grammar and code.
