@@ -1,5 +1,6 @@
 # ÞiŋLang
 A toy interpreter for a programming language I came up with.
+For those who don't know about them, see the wikipedia pages on the [Thorn](https://en.wikipedia.org/wiki/Thorn_(letter)) and [Eng](https://en.wikipedia.org/wiki/Eng_(letter)) letters.
 
 Wiki to come.
 
