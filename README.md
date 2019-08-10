@@ -14,3 +14,4 @@ Bonus features I'm too lazy to implement (yet):
  * A OO-style class syntax as candy (an example is in demo.thing) and an `instanceof` (or similar) operator
  * An array metaobject and type symbol
  * Operator "overloading"
+ * Extend the spread operator to work in more contexts

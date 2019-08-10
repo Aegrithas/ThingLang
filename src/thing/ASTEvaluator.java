@@ -6,6 +6,7 @@ import java.util.Stack;
 import java.util.HashMap;
 import java.util.ArrayList;
 import java.util.function.Supplier;
+import java.util.regex.Pattern;
 
 import static thing.AST.*;
 
@@ -300,7 +301,22 @@ class ASTEvaluator implements ASTVisitor<Value> {
   }
   
   public Value visitString(StringNode node) {
-    return Value.String.of(node.value);
+    var value = node.value;
+    value = Pattern.compile("\\\\(u[0-9A-Fa-f]{1,4}|.)").matcher(value).replaceAll(match -> {
+      switch (match.group().charAt(1)) {
+        case 'u': return new String(Character.toChars(Integer.valueOf(match.group().substring(2), 0x10)));
+        case 'b': return "\b";
+        case 't': return "\t";
+        case 'n': return "\n";
+        case 'f': return "\f";
+        case 'r': return "\r";
+        case '"': return "\"";
+        case '`': return "`";
+        case '\\': return "\\";
+      }
+      throw new LiteralException("invalid escape sequence");
+    });
+    return Value.String.of(value);
   }
   
   public Value visitNumber(NumberNode node) {

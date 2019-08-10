@@ -1,8 +1,6 @@
 package thing;
 
-import java.io.PrintStream;
 import java.util.Map;
-import java.util.List;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.ArrayList;
@@ -219,12 +217,14 @@ abstract class Value {
       
     }
     
+    @FunctionalInterface
     public interface NativeThisFunction {
       
       Value call(Value thisArg, Value... values);
       
     }
     
+    @FunctionalInterface
     public interface NativeFunction extends NativeThisFunction {
       
       Value call(Value... values);
